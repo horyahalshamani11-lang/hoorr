@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1IL38dmsLCu49L_BpYKF9FTPFhzqF_mU6
 """
 
-!pip install streamlit
+
 
 import pickle as p
 import streamlit as st
@@ -57,8 +57,7 @@ if st.button("Predict"):
   event2=event1.transform([event])
   transform=itertools.chain([nei2,day2,hour,temp,weather2,weekend2,event2,acc])
   transform2=list(transform)
-  transform3=np.array(transform2)
-  transform4=transform2.reshape(1,-1)
-  pred=model.predict(transform4)
+  transform3=np.array(transform2).reshape(1,-1)
+  pred=model.predict(transform3)
   st.success("The traffic level is{}".format(pred))
 
