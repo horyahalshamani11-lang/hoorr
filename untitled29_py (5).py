@@ -15,7 +15,7 @@ from sklearn.preprocessing import LabelEncoder
 import itertools
 import numpy as np
 
-with open('model.pkl(4)', 'rb') as f:
+with open('model.pkl(5)', 'rb') as f:
     model = p.load(f)
 
 st.title("TRAFFIC LEVEL PREDICTION")
